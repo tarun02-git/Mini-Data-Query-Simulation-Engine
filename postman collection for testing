@@ -1,0 +1,131 @@
+**Remember:**
+
+For Authentication: You'll need to set up the Basic Authentication in Postman for all the requests. In Authorization put(username: user, password: pass).
+In Method: Put all requests to "POST".
+Content-Type: application/json.
+
+Postman Query Examples:
+
+1. Query - Get Electronics Products Less Than $1000:
+
+URL: http://127.0.0.1:5000/query
+
+Body (raw, JSON):
+
+JSON
+{
+    "query": "Show me electronics less than 1000"
+}
+Expected output:
+
+JSON
+
+{
+    "results": [
+        {
+            "id": 2,
+            "name": "Smartphone",
+            "category": "Electronics",
+            "price": 800
+        },
+        {
+            "id": 5,
+            "name": "Headphones",
+            "category": "Electronics",
+            "price": 150
+        }
+    ]
+}
+2. Query - Get All Clothing Products:
+
+URL: http://127.0.0.1:5000/query
+
+Body (raw, JSON):
+
+JSON
+
+{
+    "query": "List all products in the Clothing category"
+}
+
+Expected output:
+
+JSON
+
+{
+    "results": [
+        {
+            "id": 3,
+            "name": "T-shirt",
+            "category": "Clothing",
+            "price": 30
+        },
+        {
+            "id": 4,
+            "name": "Jeans",
+            "category": "Clothing",
+            "price": 60
+        }
+    ]
+}
+3. Explain query - Explain a Query :
+
+URL: http://127.0.0.1:5000/explain
+
+Body (raw, JSON):
+
+JSON
+
+{
+    "query": "What is the price of laptops?"
+}
+
+Expected output:
+
+JSON
+
+{
+    "explanation": {
+        "category_filter": "Electronics",
+        "price_filter": null,
+        "pseudo_sql": "SELECT * FROM products WHERE category = 'Electronics'"
+    }
+}
+4. Validate query - Validate a Query:
+
+URL: http://127.0.0.1:5000/validate
+
+Body (raw, JSON):
+
+JSON
+
+{
+    "query": "Show me electronics less than 1000"
+}
+
+Expected output:
+
+JSON
+
+{
+    "is_valid": true
+}
+5. Inavlid query - Validate an Invalid Query:
+
+URL: http://127.0.0.1:5000/validate
+
+Body (raw, JSON):
+
+JSON
+
+{
+    "query": "Show me books"
+}
+
+Expected output:
+
+JSON
+
+{
+    "is_valid": false
+}
