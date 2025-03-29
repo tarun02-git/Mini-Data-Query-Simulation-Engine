@@ -45,20 +45,20 @@ This project simulates a simplified data query system using a mock in-memory dat
 
 ## Render Documenation
 
--Make an account on render.
-Create a new Web Service and add this Github Repo:
-<tarun02-git/Mini-Data-Query-Simulation-Engine>
+**-Make an account on render.**
+**-Create a new Web Service and add this Github Repo:**
+**-<tarun02-git/Mini-Data-Query-Simulation-Engine>**
 
-Language : <Programming Langauge with version>
+**Language** : <Programming Langauge with version>
 
-Branch : main/master.
+**Branch** : main/master.
 
-Region: <Your region>
+**Region:** <Oregon (US West))>
 
-Build:
+**Build:**
 <pip install -r requirements.txt>
 
-Start Command:
+**Start Command:**
 <gunicorn test:app>
 
 Deploy Your Web Service.
