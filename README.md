@@ -59,7 +59,7 @@ This project simulates a simplified data query system using a mock in-memory dat
 <pip install -r requirements.txt>
 
 **Start Command:**
-<gunicorn test:app>
+<gunicorntest:app>
 
 Deploy Your Web Service.
 
