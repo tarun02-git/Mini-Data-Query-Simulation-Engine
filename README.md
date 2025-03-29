@@ -43,7 +43,44 @@ This project simulates a simplified data query system using a mock in-memory dat
 **'/explain' (POST):** Returns a simulated query which breakdowns to explain the query.
 **'/validate' (POST):** Checks query whether it is feasible to run or not.
 
+## Render Documenation
+
+-Make an account on render.
+Create a new Web Service and add this Github Repo:
+<tarun02-git/Mini-Data-Query-Simulation-Engine>
+
+Language : <Programming Langauge with version>
+
+Branch : main/master.
+
+Region: <Your region>
+
+Build:
+<pip install -r requirements.txt>
+
+Start Command:
+<gunicorn test:app>
+
+Deploy Your Web Service.
+
+Copy the link after your Service is ready,
+Link:<https://mini-data-query-simulation-engine-2.onrender.com>
+and use it accordingly (via POSTMAN) to simulate the query.
+
 ### Request Format (JSON)
+
+All endpoints accept a JSON payload with a `query` field containing the natural language query.
+
+---json
+{
+    "query": "Your natural language query here"
+}
+---example query
+{
+    "query": "What is the price of laptops?"
+}
+
+### Request Format For Render (JSON)
 
 All endpoints accept a JSON payload with a `query` field containing the natural language query.
 
